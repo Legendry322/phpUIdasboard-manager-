@@ -1,0 +1,7 @@
+.gitignore
+# Ignore uploaded images and local config
+/appimg/
+config.php
+.env
+node_modules/
+.DS_Store
