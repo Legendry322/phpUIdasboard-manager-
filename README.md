@@ -1,5 +1,6 @@
-Added Contact Links Manager (admin/contact_links.php + API) and seed defaults.
+Added Slider Manager UI (admin/slider_manager.php), API (api/slider.php), model updates (src/models/Slider.php) and client JS.
 
-- Use /admin/contact_links.php?instance_id=N to manage contact links for instance N.
-- API: /api/contact_links.php supports GET (list), POST (create/update), DELETE, and POST?action=reorder for ordering.
-- Seed file added: migrations/seed_defaults.sql to insert default attributes (theme, seo, slider, contact links) for instance 1.
+- Use /admin/slider_manager.php?instance_id=N to manage slides for instance N.
+- Upload images via drag-drop area or the modal upload button. Upload uses /api/upload.php and auto-creates a slide for each dropped image.
+- API: GET lists slides; POST creates/updates; DELETE removes a slide (also deletes the image file if present); POST?action=reorder reorders slides.
+- Seed defaults already include a default slide for instance 1 in migrations/seed_defaults.sql
