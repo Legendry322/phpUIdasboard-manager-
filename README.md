@@ -1,6 +1,17 @@
-Added Slider Manager UI (admin/slider_manager.php), API (api/slider.php), model updates (src/models/Slider.php) and client JS.
+Added combined instance settings endpoint: api/instance_settings.php
 
-- Use /admin/slider_manager.php?instance_id=N to manage slides for instance N.
-- Upload images via drag-drop area or the modal upload button. Upload uses /api/upload.php and auto-creates a slide for each dropped image.
-- API: GET lists slides; POST creates/updates; DELETE removes a slide (also deletes the image file if present); POST?action=reorder reorders slides.
-- Seed defaults already include a default slide for instance 1 in migrations/seed_defaults.sql
+- GET /api/instance_settings.php?instance_id=N
+  Returns JSON with theme, seo, sliders (active), and contact_links (active) for the given instance_id.
+
+Example:
+  GET /api/instance_settings.php?instance_id=1
+  Response:
+  {
+    "success": true,
+    "data": {
+      "theme": { ... },
+      "seo": { ... },
+      "sliders": [ ... ],
+      "contact_links": [ ... ]
+    }
+  }
