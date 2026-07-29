@@ -1,5 +1,4 @@
 <?php
-// Simple admin dashboard shell with links to editors
 require_once __DIR__ . '/../src/Database.php';
 $pdo = Database::getConnection();
 
@@ -49,8 +48,8 @@ $selectedInstance = isset($_GET['instance_id']) ? (int)$_GET['instance_id'] : $i
       <div class="list-group">
         <a href="/admin/theme_editor.php?instance_id=<?php echo (int)$selectedInstance; ?>" class="list-group-item list-group-item-action">🎨 App Theme</a>
         <a href="#" class="list-group-item list-group-item-action disabled">🖼️ App Slider (coming)</a>
-        <a href="#" class="list-group-item list-group-item-action disabled">🔍 App SEO (coming)</a>
-        <a href="#" class="list-group-item list-group-item-action disabled">📞 App Contact Links (coming)</a>
+        <a href="/admin/seo_editor.php?instance_id=<?php echo (int)$selectedInstance; ?>" class="list-group-item list-group-item-action">🔍 App SEO</a>
+        <a href="/admin/contact_links.php?instance_id=<?php echo (int)$selectedInstance; ?>" class="list-group-item list-group-item-action">📞 App Contact Links</a>
         <a href="#" class="list-group-item list-group-item-action disabled">⚙️ Structure</a>
       </div>
     </div>
