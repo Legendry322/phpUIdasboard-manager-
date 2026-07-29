@@ -1,0 +1,4 @@
+/* admin.css - small admin styles */
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+.site-card { border-radius: 8px; }
+.side-banner { border-radius: 8px; }
